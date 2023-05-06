@@ -22,3 +22,11 @@ st.title('Supervised Machine Learning')
 st.write(
     'Helping you understand the basics of Supervised Machine Learning by showcasing various models and their '
     'performance on different datasets.')
+
+# Choose any one model from the dropdown and if you want to see the dataset, check the checkbox.
+st.sidebar.title('Choose a model')
+
+choose_model = st.sidebar.selectbox('Select a model', (
+    'Simple Linear Regression', 'Multiple Linear Regression', 'K-Nearest Neighbours', 'Random Forest Classifier'))
+
+dataset = st.sidebar.checkbox('Show dataset')
