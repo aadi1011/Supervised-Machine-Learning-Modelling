@@ -1,0 +1,9 @@
+Simple Linear Regression
+  Advertising-Sales Dataset
+  Iris Dataset
+
+Multiple Linear Regression
+  Bike Share Dataset
+ 
+K-Nearest Neighbour
+  Iris Dataset
