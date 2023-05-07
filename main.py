@@ -30,3 +30,29 @@ choose_model = st.sidebar.selectbox('Select a model', (
     'Simple Linear Regression', 'Multiple Linear Regression', 'K-Nearest Neighbours', 'Random Forest Classifier'))
 
 dataset = st.sidebar.checkbox('Show dataset')
+
+
+
+# create a function to load the SalesLinearRegression model from pkl file based on the sales input
+def predict_sales(sales):
+    # load the model
+    model = pickle.load(open('./models/SalesLinearRegression.pkl', 'rb'))
+    # predict the sales
+    sales_pred = model.predict([[sales]])
+    return sales_pred
+
+
+# create a function to load the iris-linear-prediction model from pkl file based on the sepal length, sepal width,
+# petal length and petal width user input
+def predict_iris_linear(sepal_length, sepal_width, petal_length, petal_width):
+    # load the model
+    model = pickle.load(open('./models/iris-prediction-linear-reg-model.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
+    if class_pred == 0:
+        class_pred = 'Iris-setosa'
+    elif class_pred == 1:
+        class_pred = 'Iris-versicolor'
+    elif class_pred == 2:
+        class_pred = 'Iris-virginica'
+    return class_pred
