@@ -22,15 +22,16 @@ st.title('Supervised Machine Learning')
 st.write(
     'Helping you understand the basics of Supervised Machine Learning by showcasing various models and their '
     'performance on different datasets.')
+st.markdown('---')
 
 # Choose any one model from the dropdown and if you want to see the dataset, check the checkbox.
 st.sidebar.title('Choose a model')
 
 choose_model = st.sidebar.selectbox('Select a model', (
-    'Simple Linear Regression', 'Multiple Linear Regression', 'K-Nearest Neighbours', 'Random Forest Classifier'))
+    'Simple Linear Regression', 'Multiple Linear Regression', 'K-Nearest Neighbours', 'Random Forest Classifier',
+    'Support Vector Machine', 'Logistic Regression'))
 
 dataset = st.sidebar.checkbox('Show dataset')
-
 
 
 # create a function to load the SalesLinearRegression model from pkl file based on the sales input
@@ -73,3 +74,31 @@ def predict_iris_knn(sepal_length, sepal_width, petal_length, petal_width):
         class_pred = 'Iris-virginica'
     return class_pred
 
+
+# create a function to load the multiple-linear-reg bike share model from pkl file based on the user input
+def predict_bikeshare_multiple(season, yr, mnth, holiday, weekday, workingday, weathersit, temp, atemp, hum, windspeed):
+    # load the model
+    model = pickle.load(open('./models/multiple-linear-reg-days.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[season, yr, mnth, holiday, weekday, workingday, weathersit, temp, atemp, hum,
+                                 windspeed]])
+    return class_pred
+
+
+# create a function to load the housing svm model from pkl file based on the user input
+def predict_housing_svm(gender, married, dependants, self_employed, applicant_income, coapplicant_income, loan_amount,
+                        loan_term, property_area):
+    # load the model
+    model = pickle.load(open('./models/housing_svm_model.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[gender, married, dependants, self_employed, applicant_income, coapplicant_income,
+                                 loan_amount, loan_term, property_area]])
+    return class_pred
+
+
+def predict_social_svm(age, est_salary):
+    # load the model
+    model = pickle.load(open('./models/social_svm_model.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[age, est_salary]])
+    return class_pred
