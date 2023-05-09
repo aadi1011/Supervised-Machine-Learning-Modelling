@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import openpyxl
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
@@ -93,6 +94,10 @@ def predict_housing_svm(gender, married, dependants, self_employed, applicant_in
     # predict the class
     class_pred = model.predict([[gender, married, dependants, self_employed, applicant_income, coapplicant_income,
                                  loan_amount, loan_term, property_area]])
+    if class_pred == 0:
+        class_pred = 'Not Eligible'
+    elif class_pred == 1:
+        class_pred = 'Eligible'
     return class_pred
 
 
@@ -101,4 +106,10 @@ def predict_social_svm(age, est_salary):
     model = pickle.load(open('./models/social_svm_model.pkl', 'rb'))
     # predict the class
     class_pred = model.predict([[age, est_salary]])
+    if class_pred == 0:
+        class_pred = 'would not purchase'
+    elif class_pred == 1:
+        class_pred = 'would purchase'
     return class_pred
+
+
