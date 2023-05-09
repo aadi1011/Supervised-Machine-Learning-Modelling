@@ -121,3 +121,44 @@ if choose_model == 'Simple Linear Regression':
     dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Sales Dataset'))
     st.markdown('---')
 
+    # if the dataset chosen is iris dataset
+    if dataset_radio == 'Iris Dataset':
+        st.write('Iris Dataset.')
+        st.write("The Iris Dataset contains 3 classes of 50 instances each, where each class refers to a type of iris "
+                 "flower")
+        # get the user input
+        sepal_length = st.number_input('Enter the sepal length', min_value=0.0, max_value=10.0, value=0.0)
+        sepal_width = st.number_input('Enter the sepal width', min_value=0.0, max_value=10.0, value=0.0)
+        petal_length = st.number_input('Enter the petal length', min_value=0.0, max_value=10.0, value=0.0)
+        petal_width = st.number_input('Enter the petal width', min_value=0.0, max_value=10.0, value=0.0)
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            # call the predict_iris_linear function to get the prediction
+            prediction = predict_iris_linear(sepal_length, sepal_width, petal_length, petal_width)
+            # display the prediction
+            st.success('The class of the flower is {}'.format(prediction))
+
+        if dataset:
+            # load the iris dataset
+            iris_df = pd.read_csv('./data/iris.csv')
+            # display the dataset
+            st.write(iris_df)
+
+    # if the dataset chosen is sales dataset
+    elif dataset_radio == 'Sales Dataset':
+        st.write('Sales Dataset.')
+        st.write("The Sales Dataset predicts the estimated sales value given the spending for advertising.")
+        # get the user input
+        sales = st.number_input("Enter the advertising value (0-100,000):", min_value=0.0, max_value=100000.0, value=0.0)
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            # call the predict_sales function to get the prediction
+            prediction = predict_sales(sales)
+            # display the prediction
+            st.success('The sales prediction is {}'.format(prediction))
+
+        if dataset:
+            # load the sales dataset
+            sales_df = pd.read_csv('./data/SALES.csv')
+            # display the dataset
+            st.write(sales_df)
