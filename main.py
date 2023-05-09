@@ -112,4 +112,12 @@ def predict_social_svm(age, est_salary):
         class_pred = 'would purchase'
     return class_pred
 
+# if the model selected is Simple Linear Regression, give option whether to try simple linear regression on iris dataset
+# or sales dataset
+if choose_model == 'Simple Linear Regression':
+    st.subheader('Simple Linear Regression')
+    st.write('Choose a dataset to try Simple Linear Regression on.')
+    # radio button to choose the dataset
+    dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Sales Dataset'))
+    st.markdown('---')
 
