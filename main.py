@@ -101,6 +101,7 @@ def predict_housing_svm(gender, married, dependants, self_employed, applicant_in
     return class_pred
 
 
+# create a function to load the social svm model from pkl file based on the user input
 def predict_social_svm(age, est_salary):
     # load the model
     model = pickle.load(open('./models/social_svm_model.pkl', 'rb'))
@@ -112,53 +113,41 @@ def predict_social_svm(age, est_salary):
         class_pred = 'would purchase'
     return class_pred
 
-# if the model selected is Simple Linear Regression, give option whether to try simple linear regression on iris dataset
-# or sales dataset
-if choose_model == 'Simple Linear Regression':
-    st.subheader('Simple Linear Regression')
-    st.write('Choose a dataset to try Simple Linear Regression on.')
-    # radio button to choose the dataset
-    dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Sales Dataset'))
-    st.markdown('---')
 
-    # if the dataset chosen is iris dataset
-    if dataset_radio == 'Iris Dataset':
-        st.write('Iris Dataset.')
-        st.write("The Iris Dataset contains 3 classes of 50 instances each, where each class refers to a type of iris "
-                 "flower")
-        # get the user input
-        sepal_length = st.number_input('Enter the sepal length', min_value=0.0, max_value=10.0, value=0.0)
-        sepal_width = st.number_input('Enter the sepal width', min_value=0.0, max_value=10.0, value=0.0)
-        petal_length = st.number_input('Enter the petal length', min_value=0.0, max_value=10.0, value=0.0)
-        petal_width = st.number_input('Enter the petal width', min_value=0.0, max_value=10.0, value=0.0)
-        # if the user clicks on the predict button
-        if st.button('Predict'):
-            # call the predict_iris_linear function to get the prediction
-            prediction = predict_iris_linear(sepal_length, sepal_width, petal_length, petal_width)
-            # display the prediction
-            st.success('The class of the flower is {}'.format(prediction))
+# create a function to load the random forest iris model from pkl file based on the user input
+def predict_iris_random_forest(sepal_length, sepal_width, petal_length, petal_width):
+    # load the model
+    model = pickle.load(open('./models/randomforest_iris.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
+    if class_pred == 0:
+        class_pred = 'Iris-setosa'
+    elif class_pred == 1:
+        class_pred = 'Iris-versicolor'
+    elif class_pred == 2:
+        class_pred = 'Iris-virginica'
+    return class_pred
 
-        if dataset:
-            # load the iris dataset
-            iris_df = pd.read_csv('./data/iris.csv')
-            # display the dataset
-            st.write(iris_df)
 
-    # if the dataset chosen is sales dataset
-    elif dataset_radio == 'Sales Dataset':
-        st.write('Sales Dataset.')
-        st.write("The Sales Dataset predicts the estimated sales value given the spending for advertising.")
-        # get the user input
-        sales = st.number_input("Enter the advertising value (0-100,000):", min_value=0.0, max_value=100000.0, value=0.0)
-        # if the user clicks on the predict button
-        if st.button('Predict'):
-            # call the predict_sales function to get the prediction
-            prediction = predict_sales(sales)
-            # display the prediction
-            st.success('The sales prediction is {}'.format(prediction))
+# create a function to load the random forest stroke prediction model from pkl file based on the user input
+def predict_stroke_random_forest(gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status):
+    # load the model
+    model = pickle.load(open('./models/randomforest_stroke.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status]])
+    if class_pred == 0:
+        class_pred = 'unlikely'
+    elif class_pred == 1:
+        class_pred = 'likely'
+    return class_pred
 
-        if dataset:
-            # load the sales dataset
-            sales_df = pd.read_csv('./data/SALES.csv')
-            # display the dataset
-            st.write(sales_df)
+def predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean):
+    # load the model
+    model = pickle.load(open('./models/knnClass_breastcancer.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean]])
+    if class_pred == 0:
+        class_pred = 'Benign'
+    elif class_pred == 1:
+        class_pred = 'Malignant'
+    return class_pred
