@@ -141,6 +141,7 @@ def predict_stroke_random_forest(gender, age, hypertension, heart_disease, ever_
         class_pred = 'likely'
     return class_pred
 
+
 def predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean):
     # load the model
     model = pickle.load(open('./models/knnClass_breastcancer.pkl', 'rb'))
@@ -151,3 +152,14 @@ def predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_me
     elif class_pred == 1:
         class_pred = 'Malignant'
     return class_pred
+
+# ''' STREAMLIT MODEL MENU '''
+
+# if the model selected is Simple Linear Regression, give option whether to try simple linear regression on iris dataset
+# or sales dataset
+if choose_model == 'Simple Linear Regression':
+    st.subheader('Simple Linear Regression')
+    st.write('Choose a dataset to try Simple Linear Regression on.')
+    # radio button to choose the dataset
+    dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Sales Dataset'))
+    st.markdown('---')
