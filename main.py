@@ -205,3 +205,77 @@ if choose_model == 'Simple Linear Regression':
             sales_df = pd.read_csv('./data/SALES.csv')
             # display the dataset
             st.write(sales_df)
+            
+if choose_model == 'Multiple Linear Regression':
+    st.subheader('Multiple Linear Regression')
+    st.write('Bike Sharing Dataset.')
+    # get the user input
+
+    season = st.radio('Enter the season', ('springer', 'summer', 'fall', 'winter'))
+    if season == 'springer':
+        season = 1
+    elif season == 'summer':
+        season = 2
+    elif season == 'fall':
+        season = 3
+    elif season == 'winter':
+        season = 4
+
+    yr = st.radio('Enter the year', ('2011', '2012'))
+    if yr == '2011':
+        yr = 0
+    elif yr == '2012':
+        yr = 1
+        
+    mnth = st.selectbox('Enter the month', ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+                                            'September', 'October', 'November', 'December'))
+    if mnth == 'January':
+        mnth = 1
+    elif mnth == 'February':
+        mnth = 2
+    elif mnth == 'March':
+        mnth = 3
+    elif mnth == 'April':
+        mnth = 4
+    elif mnth == 'May':
+        mnth = 5
+    elif mnth == 'June':
+        mnth = 6
+    elif mnth == 'July':
+        mnth = 7
+    elif mnth == 'August':
+        mnth = 8
+    elif mnth == 'September':
+        mnth = 9
+    elif mnth == 'October':
+        mnth = 10
+    elif mnth == 'November':
+        mnth = 11
+    elif mnth == 'December':
+        mnth = 12
+        
+    holiday = st.radio('Is it a holiday?', ('Yes', 'No'))
+    if holiday == 'Yes':
+        holiday = 1
+    elif holiday == 'No':
+        holiday = 0
+
+    weekday = st.selectbox('Enter the weekday', ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+                                                 'Saturday'))
+    if weekday == 'Sunday':
+        weekday = 0
+    elif weekday == 'Monday':
+        weekday = 1
+    elif weekday == 'Tuesday':
+        weekday = 2
+    elif weekday == 'Wednesday':
+        weekday = 3
+    elif weekday == 'Thursday':
+        weekday = 4
+    elif weekday == 'Friday':
+        weekday = 5
+    elif weekday == 'Saturday':
+        weekday = 6
+
+
+
