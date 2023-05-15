@@ -253,4 +253,12 @@ if choose_model == 'Multiple Linear Regression':
         mnth = 11
     elif mnth == 'December':
         mnth = 12
+        
+    holiday = st.radio('Is it a holiday?', ('Yes', 'No'))
+    if holiday == 'Yes':
+        holiday = 1
+    elif holiday == 'No':
+        holiday = 0
+
+
 
