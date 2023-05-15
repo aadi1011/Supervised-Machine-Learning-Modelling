@@ -205,3 +205,24 @@ if choose_model == 'Simple Linear Regression':
             sales_df = pd.read_csv('./data/SALES.csv')
             # display the dataset
             st.write(sales_df)
+            
+if choose_model == 'Multiple Linear Regression':
+    st.subheader('Multiple Linear Regression')
+    st.write('Bike Sharing Dataset.')
+    # get the user input
+
+    season = st.radio('Enter the season', ('springer', 'summer', 'fall', 'winter'))
+    if season == 'springer':
+        season = 1
+    elif season == 'summer':
+        season = 2
+    elif season == 'fall':
+        season = 3
+    elif season == 'winter':
+        season = 4
+
+    yr = st.radio('Enter the year', ('2011', '2012'))
+    if yr == '2011':
+        yr = 0
+    elif yr == '2012':
+        yr = 1
