@@ -260,5 +260,22 @@ if choose_model == 'Multiple Linear Regression':
     elif holiday == 'No':
         holiday = 0
 
+    weekday = st.selectbox('Enter the weekday', ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+                                                 'Saturday'))
+    if weekday == 'Sunday':
+        weekday = 0
+    elif weekday == 'Monday':
+        weekday = 1
+    elif weekday == 'Tuesday':
+        weekday = 2
+    elif weekday == 'Wednesday':
+        weekday = 3
+    elif weekday == 'Thursday':
+        weekday = 4
+    elif weekday == 'Friday':
+        weekday = 5
+    elif weekday == 'Saturday':
+        weekday = 6
+
 
 
