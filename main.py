@@ -226,3 +226,31 @@ if choose_model == 'Multiple Linear Regression':
         yr = 0
     elif yr == '2012':
         yr = 1
+        
+    mnth = st.selectbox('Enter the month', ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+                                            'September', 'October', 'November', 'December'))
+    if mnth == 'January':
+        mnth = 1
+    elif mnth == 'February':
+        mnth = 2
+    elif mnth == 'March':
+        mnth = 3
+    elif mnth == 'April':
+        mnth = 4
+    elif mnth == 'May':
+        mnth = 5
+    elif mnth == 'June':
+        mnth = 6
+    elif mnth == 'July':
+        mnth = 7
+    elif mnth == 'August':
+        mnth = 8
+    elif mnth == 'September':
+        mnth = 9
+    elif mnth == 'October':
+        mnth = 10
+    elif mnth == 'November':
+        mnth = 11
+    elif mnth == 'December':
+        mnth = 12
+
