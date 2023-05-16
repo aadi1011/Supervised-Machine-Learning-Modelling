@@ -277,5 +277,9 @@ if choose_model == 'Multiple Linear Regression':
     elif weekday == 'Saturday':
         weekday = 6
 
-
+    workingday = st.radio('Is it a working day?', ('Yes', 'No'))
+    if workingday == 'Yes':
+        workingday = 1
+    elif workingday == 'No':
+        workingday = 0
 
