@@ -289,3 +289,5 @@ if choose_model == 'Multiple Linear Regression':
                                                               'Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog'))
     if weathersit == 'Clear, Few clouds, Partly cloudy, Partly cloudy':
         weathersit = 1
+    elif weathersit == 'Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist':
+        weathersit = 2
