@@ -283,3 +283,9 @@ if choose_model == 'Multiple Linear Regression':
     elif workingday == 'No':
         workingday = 0
 
+    weathersit = st.selectbox('Enter the weather situation', ('Clear, Few clouds, Partly cloudy, Partly cloudy',
+                                                              'Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist',
+                                                              'Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds',
+                                                              'Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog'))
+    if weathersit == 'Clear, Few clouds, Partly cloudy, Partly cloudy':
+        weathersit = 1
