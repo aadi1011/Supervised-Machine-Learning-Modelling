@@ -293,3 +293,5 @@ if choose_model == 'Multiple Linear Regression':
         weathersit = 2
     elif weathersit == 'Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds':
         weathersit = 3
+    elif weathersit == 'Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog':
+        weathersit = 4
