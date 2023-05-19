@@ -295,3 +295,11 @@ if choose_model == 'Multiple Linear Regression':
         weathersit = 3
     elif weathersit == 'Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog':
         weathersit = 4
+
+    temp = st.number_input('Enter the temperature (in Celc)', min_value=0.0, max_value=50.0, value=0.0)
+    
+    atemp = st.number_input('Enter the feels-like temperature', min_value=0.0, max_value=50.0, value=0.0)
+    
+    hum = st.number_input('Enter the humidity (%)', min_value=0.0, max_value=100.0, value=0.0)
+
+        
