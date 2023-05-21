@@ -302,4 +302,12 @@ if choose_model == 'Multiple Linear Regression':
     
     hum = st.number_input('Enter the humidity (%)', min_value=0.0, max_value=100.0, value=0.0)
 
-        
+    windspeed = st.number_input('Enter the wind speed (kmph [0-67])', min_value=0.0, max_value=67.0, value=0.0)
+    
+    # if the user clicks on the predict button
+    if st.button('Predict'):
+        # call the predict_bikeshare_multiple function to get the prediction
+        prediction = predict_bikeshare_multiple(season, yr, mnth, holiday, weekday, workingday, weathersit, temp, atemp,
+                                                hum, windspeed)
+        # display the prediction
+        st.success('Predicted number of bikes to be rented: {}'.format(prediction))
