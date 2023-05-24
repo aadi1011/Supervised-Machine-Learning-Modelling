@@ -11,3 +11,8 @@ A repository with the complete overview of Supervised Machine Learning and the i
   - KNN Classfier
   - KNN Regressor
 -  Random Forest
+
+## Datasets Used
+- Store Sales
+- House Price Dataset
+- Iris Dataset
