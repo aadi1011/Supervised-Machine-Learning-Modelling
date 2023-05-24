@@ -17,3 +17,4 @@ A repository with the complete overview of Supervised Machine Learning and the i
 - House Price Dataset
 - Iris Dataset
 - Breast Cancer (Wisconsin) Dataset
+- Stroke Prediction
