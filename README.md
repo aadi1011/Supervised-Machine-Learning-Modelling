@@ -18,3 +18,4 @@ A repository with the complete overview of Supervised Machine Learning and the i
 - Iris Dataset
 - Breast Cancer (Wisconsin) Dataset
 - Stroke Prediction
+- Social Media Purchase Dataset
