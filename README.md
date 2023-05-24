@@ -16,3 +16,4 @@ A repository with the complete overview of Supervised Machine Learning and the i
 - Store Sales
 - House Price Dataset
 - Iris Dataset
+- Breast Cancer (Wisconsin) Dataset
