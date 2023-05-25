@@ -1,5 +1,6 @@
 # Supervised-Machine-Learning-Modelling
 A repository with the complete overview of Supervised Machine Learning and the implementation of various models based on multiple datasets.
+Deployment of the same has also been done on Streamlit.
 
 ## Machine Learning Models:
 - Simple Linear Regression
