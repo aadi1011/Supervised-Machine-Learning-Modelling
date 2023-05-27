@@ -317,3 +317,13 @@ if choose_model == 'Multiple Linear Regression':
         bikeshare_df = pd.read_csv('./data/day.csv')
         # display the dataset
         st.write(bikeshare_df)
+
+if choose_model == 'K-Nearest Neighbours':
+
+    knn_choice = st.sidebar.selectbox('Select the method', ('KNN Classification', 'KNN Regression'))
+    if knn_choice == 'KNN Classification':
+        st.subheader('K-Nearest Neighbour Classification')
+        st.write('Choose a dataset to try KNN Classification on')
+        # radio button to choose the dataset
+        dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Breast Cancer Dataset'))
+        st.markdown('---')
