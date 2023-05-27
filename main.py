@@ -311,3 +311,9 @@ if choose_model == 'Multiple Linear Regression':
                                                 hum, windspeed)
         # display the prediction
         st.success('Predicted number of bikes to be rented: {}'.format(prediction))
+    
+    if dataset:
+        # load the bikeshare dataset
+        bikeshare_df = pd.read_csv('./data/day.csv')
+        # display the dataset
+        st.write(bikeshare_df)
