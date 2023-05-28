@@ -327,3 +327,13 @@ if choose_model == 'K-Nearest Neighbours':
         # radio button to choose the dataset
         dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Breast Cancer Dataset'))
         st.markdown('---')
+        if dataset_radio == 'Iris Dataset':
+            st.markdown('##### Iris Flower Prediction')
+            st.write(
+                "The Iris Dataset contains 3 classes of 50 instances each, where each class refers to a type of iris "
+                "flower")
+            # get the user input
+            sepal_length = st.number_input('Enter the sepal length', min_value=0.0, max_value=10.0, value=0.0)
+            sepal_width = st.number_input('Enter the sepal width', min_value=0.0, max_value=5.0, value=0.0)
+            petal_length = st.number_input('Enter the petal length', min_value=0.0, max_value=10.0, value=0.0)
+            petal_width = st.number_input('Enter the petal width', min_value=0.0, max_value=5.0, value=0.0)
