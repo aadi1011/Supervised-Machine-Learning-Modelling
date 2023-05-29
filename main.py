@@ -337,3 +337,9 @@ if choose_model == 'K-Nearest Neighbours':
             sepal_width = st.number_input('Enter the sepal width', min_value=0.0, max_value=5.0, value=0.0)
             petal_length = st.number_input('Enter the petal length', min_value=0.0, max_value=10.0, value=0.0)
             petal_width = st.number_input('Enter the petal width', min_value=0.0, max_value=5.0, value=0.0)
+            # if the user clicks on the predict button
+            if st.button('Predict'):
+                # call the predict_knn function to get the prediction
+                prediction = predict_iris_knn(sepal_length, sepal_width, petal_length, petal_width)
+                # display the prediction
+                st.success('The type of iris flower is: {}'.format(prediction))
