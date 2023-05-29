@@ -343,3 +343,9 @@ if choose_model == 'K-Nearest Neighbours':
                 prediction = predict_iris_knn(sepal_length, sepal_width, petal_length, petal_width)
                 # display the prediction
                 st.success('The type of iris flower is: {}'.format(prediction))
+
+            if dataset:
+                # load the iris dataset
+                iris = pd.read_csv('./data/iris.csv')
+                # display the dataset
+                st.write(iris)
