@@ -349,3 +349,21 @@ if choose_model == 'K-Nearest Neighbours':
                 iris = pd.read_csv('./data/iris.csv')
                 # display the dataset
                 st.write(iris)
+
+        if dataset_radio == 'Breast Cancer Dataset':
+            st.markdown('##### Breast Cancer Prediction')
+            st.write(
+                "The Breast Cancer Dataset contains 2 classes where each class refers to a type of breast cancer")
+            # get the user input
+            radius_mean = st.number_input('Enter the mean radius of lobes', min_value=0.0, max_value=40.0, value=0.0)
+            texture_mean = st.number_input('Enter the mean surface texture', min_value=0.0, max_value=40.0, value=0.0)
+            perimeter_mean = st.number_input('Enter the mean outer perimeter of lobes', min_value=0.0, max_value=300.0, value=0.0)
+            area_mean = st.number_input('Enter the mean area of lobes', min_value=0.0, max_value=3000.0, value=0.0)
+            smoothness_mean = st.number_input('Enter the mean smoothness level', min_value=0.0, max_value=0.3, value=0.0)
+            compactness_mean = st.number_input('Enter the mean compactness', min_value=0.0, max_value=0.5, value=0.0)
+            concavity_mean = st.number_input('Enter the mean concavity', min_value=0.0, max_value=0.5, value=0.0)
+            concave_points_mean = st.number_input('Enter the mean concave points', min_value=0.0, max_value=0.5,
+                                                    value=0.0)
+            symmetry_mean = st.number_input('Enter the mean symmetry', min_value=0.0, max_value=0.5, value=0.0)
+            fractal_dimension_mean = st.number_input('Enter the mean fractal dimension', min_value=0.0, max_value=0.5,
+                                                        value=0.0)
