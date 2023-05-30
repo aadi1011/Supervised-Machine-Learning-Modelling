@@ -383,3 +383,12 @@ if choose_model == 'K-Nearest Neighbours':
                 # display the dataset
                 st.write(breast_cancer)
 
+    if knn_choice == 'KNN Regression':
+        st.subheader('K-Nearest Neighbour Regression')
+        st.write('Choose a dataset to try KNN Regression on')
+
+if choose_model == 'Support Vector Machine':
+    st.subheader('Support Vector Machine')
+    st.write('Choose a dataset to try Support Vector Machine on')
+    # radio button to choose the dataset
+    dataset_radio = st.radio('Choose a dataset', ('Housing Dataset', 'Socials Dataset'))
