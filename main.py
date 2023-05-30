@@ -367,3 +367,19 @@ if choose_model == 'K-Nearest Neighbours':
             symmetry_mean = st.number_input('Enter the mean symmetry', min_value=0.0, max_value=0.5, value=0.0)
             fractal_dimension_mean = st.number_input('Enter the mean fractal dimension', min_value=0.0, max_value=0.5,
                                                         value=0.0)
+
+            # if the user clicks on the predict button
+            if st.button('Predict'):
+                # call the predict_knn function to get the prediction
+                prediction = predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean,
+                                                       compactness_mean, concavity_mean, concave_points_mean, symmetry_mean,
+                                                       fractal_dimension_mean)
+                # display the prediction
+                st.success('The type of breast cancer is: {}'.format(prediction))
+
+            if dataset:
+                # load the breast cancer dataset
+                breast_cancer = pd.read_csv('./data/bdiag.csv')
+                # display the dataset
+                st.write(breast_cancer)
+
