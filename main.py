@@ -392,3 +392,37 @@ if choose_model == 'Support Vector Machine':
     st.write('Choose a dataset to try Support Vector Machine on')
     # radio button to choose the dataset
     dataset_radio = st.radio('Choose a dataset', ('Housing Dataset', 'Socials Dataset'))
+
+    # if the user chooses the housing dataset
+    if dataset_radio == 'Housing Dataset':
+        st.write('The housing model predicts the load status of a house in Boston given the customer data')
+        # get the user input
+        gender = st.radio('Choose your gender', ('Male', 'Female'))
+        if gender == 'Male':
+            gender = 1
+        if gender == 'Female':
+            gender = 0
+        married = st.radio('Are you married?', ('Yes', 'No'))
+        if married == 'Yes':
+            married = 1
+        if married == 'No':
+            married = 0
+        dependents = st.slider('How many dependents do you have?', 0, 4)
+        self_employed = st.radio('Are you self-employed?', ('Yes', 'No'))
+        if self_employed == 'Yes':
+            self_employed = 1
+        if self_employed == 'No':
+            self_employed = 0
+        applicant_income = st.number_input('Enter your income', min_value=0.0, max_value=10000000.0, value=0.0)
+        coapplicant_income = st.number_input('Enter your co-applicant\'s income', min_value=0.0, max_value=10000000.0,
+                                             value=0.0)
+        loan_amount = st.number_input('Enter the loan amount', min_value=0.0, max_value=100000000.0, value=0.0)
+        loan_amount = loan_amount / 1000
+        loan_amount_term = st.slider('Enter the loan amount term (in months)', 0, 500)
+        property_area = st.radio('Choose your property area', ('Urban', 'Semi-urban', 'Rural'))
+        if property_area == 'Urban':
+            property_area = 2
+        if property_area == 'Semi-urban':
+            property_area = 1
+        if property_area == 'Rural':
+            property_area = 0
