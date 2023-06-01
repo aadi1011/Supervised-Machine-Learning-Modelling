@@ -426,3 +426,10 @@ if choose_model == 'Support Vector Machine':
             property_area = 1
         if property_area == 'Rural':
             property_area = 0
+
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            prediction = predict_housing_svm(gender, married, dependents, self_employed, applicant_income,
+                                             coapplicant_income, loan_amount, loan_amount_term, property_area)
+            # display the prediction
+            st.success('The loan status of the house is: {}'.format(prediction))
