@@ -433,3 +433,10 @@ if choose_model == 'Support Vector Machine':
                                              coapplicant_income, loan_amount, loan_amount_term, property_area)
             # display the prediction
             st.success('The loan status of the house is: {}'.format(prediction))
+
+        if dataset:
+            # load the housing dataset
+            housing = pd.read_excel('./data/house_loan_train.xlsx')
+            # display the dataset
+            st.write(housing)
+
