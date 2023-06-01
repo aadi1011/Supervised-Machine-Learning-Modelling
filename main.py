@@ -439,4 +439,16 @@ if choose_model == 'Support Vector Machine':
             housing = pd.read_excel('./data/house_loan_train.xlsx')
             # display the dataset
             st.write(housing)
-
+    # if the user chooses the socials dataset
+    if dataset_radio == 'Socials Dataset':
+        st.write(
+            'The socials model predicts whether a customer would buy a product or not based on their age and salary')
+        # get the user input
+        age = st.number_input('Enter your age', min_value=0, max_value=100, value=0)
+        estimated_salary = st.number_input('Enter your estimated salary', min_value=0.0, max_value=10000000.0,
+                                           value=0.0)
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            prediction = predict_social_svm(age, estimated_salary)
+            # display the prediction
+            st.success('The person {} the product'.format(prediction))
