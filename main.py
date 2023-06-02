@@ -465,3 +465,19 @@ if choose_model == 'Random Forest Classifier':
     # radio button to choose the dataset
     dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Stroke Prediction Dataset'))
     st.markdown('---')
+    
+       # if the user chooses the iris dataset
+    if dataset_radio == 'Iris Dataset':
+        st.write('The Iris Dataset contains 3 classes of 50 instances each, where each class refers to a type of iris '
+                 'flower')
+        # get the user input
+        sepal_length = st.number_input('Enter the sepal length', min_value=0.0, max_value=10.0, value=0.0)
+        sepal_width = st.number_input('Enter the sepal width', min_value=0.0, max_value=5.0, value=0.0)
+        petal_length = st.number_input('Enter the petal length', min_value=0.0, max_value=10.0, value=0.0)
+        petal_width = st.number_input('Enter the petal width', min_value=0.0, max_value=5.0, value=0.0)
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            # call the predict_knn function to get the prediction
+            prediction = predict_iris_random_forest(sepal_length, sepal_width, petal_length, petal_width)
+            # display the prediction
+            st.success('The type of iris flower is: {}'.format(prediction))
