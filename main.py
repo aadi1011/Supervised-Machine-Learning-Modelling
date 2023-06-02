@@ -205,7 +205,7 @@ if choose_model == 'Simple Linear Regression':
             sales_df = pd.read_csv('./data/SALES.csv')
             # display the dataset
             st.write(sales_df)
-            
+
 if choose_model == 'Multiple Linear Regression':
     st.subheader('Multiple Linear Regression')
     st.write('Bike Sharing Dataset.')
@@ -226,7 +226,7 @@ if choose_model == 'Multiple Linear Regression':
         yr = 0
     elif yr == '2012':
         yr = 1
-        
+
     mnth = st.selectbox('Enter the month', ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
                                             'September', 'October', 'November', 'December'))
     if mnth == 'January':
@@ -253,7 +253,7 @@ if choose_model == 'Multiple Linear Regression':
         mnth = 11
     elif mnth == 'December':
         mnth = 12
-        
+
     holiday = st.radio('Is it a holiday?', ('Yes', 'No'))
     if holiday == 'Yes':
         holiday = 1
@@ -297,13 +297,13 @@ if choose_model == 'Multiple Linear Regression':
         weathersit = 4
 
     temp = st.number_input('Enter the temperature (in Celc)', min_value=0.0, max_value=50.0, value=0.0)
-    
+
     atemp = st.number_input('Enter the feels-like temperature', min_value=0.0, max_value=50.0, value=0.0)
-    
+
     hum = st.number_input('Enter the humidity (%)', min_value=0.0, max_value=100.0, value=0.0)
 
     windspeed = st.number_input('Enter the wind speed (kmph [0-67])', min_value=0.0, max_value=67.0, value=0.0)
-    
+
     # if the user clicks on the predict button
     if st.button('Predict'):
         # call the predict_bikeshare_multiple function to get the prediction
@@ -311,7 +311,7 @@ if choose_model == 'Multiple Linear Regression':
                                                 hum, windspeed)
         # display the prediction
         st.success('Predicted number of bikes to be rented: {}'.format(prediction))
-    
+
     if dataset:
         # load the bikeshare dataset
         bikeshare_df = pd.read_csv('./data/day.csv')
@@ -439,6 +439,7 @@ if choose_model == 'Support Vector Machine':
             housing = pd.read_excel('./data/house_loan_train.xlsx')
             # display the dataset
             st.write(housing)
+
     # if the user chooses the socials dataset
     if dataset_radio == 'Socials Dataset':
         st.write(
@@ -465,8 +466,8 @@ if choose_model == 'Random Forest Classifier':
     # radio button to choose the dataset
     dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Stroke Prediction Dataset'))
     st.markdown('---')
-    
-       # if the user chooses the iris dataset
+
+    # if the user chooses the iris dataset
     if dataset_radio == 'Iris Dataset':
         st.write('The Iris Dataset contains 3 classes of 50 instances each, where each class refers to a type of iris '
                  'flower')
@@ -481,3 +482,69 @@ if choose_model == 'Random Forest Classifier':
             prediction = predict_iris_random_forest(sepal_length, sepal_width, petal_length, petal_width)
             # display the prediction
             st.success('The type of iris flower is: {}'.format(prediction))
+
+        if dataset:
+            # load the iris dataset
+            iris = pd.read_csv('./data/iris.csv')
+            # display the dataset
+            st.write(iris)
+
+    if dataset_radio == 'Stroke Prediction Dataset':
+        st.write('The Stroke Prediction Dataset predicts whether a person is likely to get a stroke or not based on '
+                 'health data')
+        # get the user input
+        gender = st.radio('Select your gender:', ('Male', 'Female'))
+        if gender == 'Male':
+            gender = 1
+        if gender == 'Female':
+            gender = 0
+        age = st.slider('Enter your age', min_value=0, max_value=100, value=0)
+        hypertension = st.radio('Do you have hypertension?', ('Yes', 'No'))
+        if hypertension == 'Yes':
+            hypertension = 1
+        if hypertension == 'No':
+            hypertension = 0
+        heart_disease = st.radio('Do you have a history heart disease?', ('Yes', 'No'))
+        if heart_disease == 'Yes':
+            heart_disease = 1
+        if heart_disease == 'No':
+            heart_disease = 0
+        ever_married = st.radio('Are you married?', ('Yes', 'No'))
+        if ever_married == 'Yes':
+            ever_married = 1
+        if ever_married == 'No':
+            ever_married = 0
+        work_type = st.radio('What is your work type?', ('Private', 'Self-employed', 'Govt-job'))
+        if work_type == 'Private':
+            work_type = 1
+        if work_type == 'Self-employed':
+            work_type = 2
+        if work_type == 'Govt-job':
+            work_type = 0
+        residence_type = st.radio('What is your residence type?', ('Urban', 'Rural'))
+        if residence_type == 'Urban':
+            residence_type = 1
+        if residence_type == 'Rural':
+            residence_type = 0
+        avg_glucose_level = st.number_input('Enter your average glucose level', min_value=0.0, max_value=350.0,value=0.0)
+        bmi = st.number_input('Enter your BMI', min_value=0.0, max_value=60.0, value=0.0)
+        smoking_status = st.selectbox('What is your smoking status?', ('Never Smoked', 'Formerly Smoked', 'Smokes', 'Unknown'))
+        if smoking_status == 'Never Smoked':
+            smoking_status = 2
+        if smoking_status == 'Formerly Smoked':
+            smoking_status = 1
+        if smoking_status == 'Smokes':
+            smoking_status = 3
+        if smoking_status == 'Unknown':
+            smoking_status = 0
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            prediction = predict_stroke_random_forest(gender, age, hypertension, heart_disease, ever_married, work_type,
+                                                      residence_type, avg_glucose_level, bmi, smoking_status)
+            # display the prediction
+            st.success('The person is {} to get a stroke'.format(prediction))
+        if dataset:
+            # load the stroke prediction dataset
+            stroke = pd.read_csv('./data/stroke_prediction.csv')
+            # display the dataset
+            st.write(stroke)
