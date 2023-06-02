@@ -3,20 +3,7 @@
 # Importing the libraries
 import streamlit as st
 import pandas as pd
-import numpy as np
 import pickle
-import openpyxl
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
-import plotly.graph_objects as go
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
 
 # Title of the App
 st.title('Supervised Machine Learning')
@@ -130,32 +117,47 @@ def predict_iris_random_forest(sepal_length, sepal_width, petal_length, petal_wi
 
 
 # create a function to load the random forest stroke prediction model from pkl file based on the user input
-def predict_stroke_random_forest(gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status):
+def predict_stroke_random_forest(gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type,
+                                 avg_glucose_level, bmi, smoking_status):
     # load the model
     model = pickle.load(open('./models/randomforest_stroke.pkl', 'rb'))
     # predict the class
-    class_pred = model.predict([[gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status]])
+    class_pred = model.predict([[gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type,
+                                 avg_glucose_level, bmi, smoking_status]])
     if class_pred == 0:
         class_pred = 'unlikely'
     elif class_pred == 1:
         class_pred = 'likely'
     return class_pred
 
-def predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean):
+
+def predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean,
+                              concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean):
     # load the model
     model = pickle.load(open('./models/knnClass_breastcancer.pkl', 'rb'))
     # predict the class
-    class_pred = model.predict([[radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave_points_mean, symmetry_mean, fractal_dimension_mean]])
+    class_pred = model.predict([[radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean,
+                                 compactness_mean, concavity_mean, concave_points_mean, symmetry_mean,
+                                 fractal_dimension_mean]])
     if class_pred == 0:
         class_pred = 'Benign'
     elif class_pred == 1:
         class_pred = 'Malignant'
     return class_pred
 
+def predict_abalone_knn(sex, length, diameter, height, whole_weight, shucked_weight, viscera_weight, shell_weight):
+    # load the model
+    model = pickle.load(open('./models/knn_regression_abalone.pkl', 'rb'))
+    # predict the class
+    class_pred = model.predict([[sex, length, diameter, height, whole_weight, shucked_weight, viscera_weight, shell_weight]])
+    return class_pred
+
 # ''' STREAMLIT MODEL MENU '''
 
 # if the model selected is Simple Linear Regression, give option whether to try simple linear regression on iris dataset
 # or sales dataset
+
+
 if choose_model == 'Simple Linear Regression':
     st.subheader('Simple Linear Regression')
     st.write('Choose a dataset to try Simple Linear Regression on.')
@@ -321,6 +323,7 @@ if choose_model == 'Multiple Linear Regression':
 if choose_model == 'K-Nearest Neighbours':
 
     knn_choice = st.sidebar.selectbox('Select the method', ('KNN Classification', 'KNN Regression'))
+
     if knn_choice == 'KNN Classification':
         st.subheader('K-Nearest Neighbour Classification')
         st.write('Choose a dataset to try KNN Classification on')
@@ -357,22 +360,26 @@ if choose_model == 'K-Nearest Neighbours':
             # get the user input
             radius_mean = st.number_input('Enter the mean radius of lobes', min_value=0.0, max_value=40.0, value=0.0)
             texture_mean = st.number_input('Enter the mean surface texture', min_value=0.0, max_value=40.0, value=0.0)
-            perimeter_mean = st.number_input('Enter the mean outer perimeter of lobes', min_value=0.0, max_value=300.0, value=0.0)
+            perimeter_mean = st.number_input('Enter the mean outer perimeter of lobes', min_value=0.0, max_value=300.0,
+                                             value=0.0)
             area_mean = st.number_input('Enter the mean area of lobes', min_value=0.0, max_value=3000.0, value=0.0)
-            smoothness_mean = st.number_input('Enter the mean smoothness level', min_value=0.0, max_value=0.3, value=0.0)
+            smoothness_mean = st.number_input('Enter the mean smoothness level', min_value=0.0, max_value=0.3,
+                                              value=0.0)
             compactness_mean = st.number_input('Enter the mean compactness', min_value=0.0, max_value=0.5, value=0.0)
             concavity_mean = st.number_input('Enter the mean concavity', min_value=0.0, max_value=0.5, value=0.0)
             concave_points_mean = st.number_input('Enter the mean concave points', min_value=0.0, max_value=0.5,
-                                                    value=0.0)
+                                                  value=0.0)
             symmetry_mean = st.number_input('Enter the mean symmetry', min_value=0.0, max_value=0.5, value=0.0)
             fractal_dimension_mean = st.number_input('Enter the mean fractal dimension', min_value=0.0, max_value=0.5,
-                                                        value=0.0)
+                                                     value=0.0)
 
             # if the user clicks on the predict button
             if st.button('Predict'):
                 # call the predict_knn function to get the prediction
-                prediction = predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean,
-                                                       compactness_mean, concavity_mean, concave_points_mean, symmetry_mean,
+                prediction = predict_breast_cancer_knn(radius_mean, texture_mean, perimeter_mean, area_mean,
+                                                       smoothness_mean,
+                                                       compactness_mean, concavity_mean, concave_points_mean,
+                                                       symmetry_mean,
                                                        fractal_dimension_mean)
                 # display the prediction
                 st.success('The type of breast cancer is: {}'.format(prediction))
@@ -385,13 +392,61 @@ if choose_model == 'K-Nearest Neighbours':
 
     if knn_choice == 'KNN Regression':
         st.subheader('K-Nearest Neighbour Regression')
-        st.write('Choose a dataset to try KNN Regression on')
+        st.markdown('##### Abalone Age Prediction')
+        st.write(
+            "Predicting the age of abalone from physical measurements. The age of abalone is determined by cutting the "
+            "shell through the cone, staining it, and counting the number of rings through a microscope -- a boring "
+            "and time-consuming task. Other measurements, which are easier to obtain, are used to predict the age. "
+            "Further information, such as weather patterns and location (hence food availability) may be required to "
+            "solve the problem")
+
+        # get the user input
+        sex = st.radio("Choose a gender", ("Male", "Female", "Infant"))
+        if sex == "Male":
+            sex = 2
+        if sex == "Female":
+            sex = 0
+        if sex == "Infant":
+            sex = 1
+
+        length = st.number_input('Enter the length of the abalone (longest shell measurement in mm)', min_value=0.0,
+                         max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        diameter = st.number_input('Enter the diameter of the abalone (perpendicular to length in mm)', min_value=0.0,
+                         max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        height = st.number_input('Enter the height of the abalone (with meat in the shell in mm)', min_value=0.0,
+                         max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        whole_weight = st.number_input('Enter the weight of the whole abalone (in grams)', min_value=0.0,
+                            max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        shucked_weight = st.number_input('Enter the weight of the meat of the abalone (in grams)', min_value=0.0,
+                            max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        viscera_weight = st.number_input('Enter the weight of the guts of the abalone (after bleeding in grams)', min_value=0.0,
+                            max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        shell_weight = st.number_input('Enter the weight of the shell of the abalone (after being dried in grams)', min_value=0.0,
+                            max_value=1.0, value=0.00, step=1e-3, format="%.3f")
+
+        # if the user clicks on the predict button
+        if st.button('Predict'):
+            prediction = predict_abalone_knn(sex, length, diameter, height, whole_weight, shucked_weight, viscera_weight, shell_weight)
+            st.success('The age of the abalone is: {}'.format(prediction))
+
+        if dataset:
+            # load the abalone dataset
+            abalone = pd.read_csv('./data/abalone_data.csv')
+            # display the dataset
+            st.write(abalone)
+
 
 if choose_model == 'Support Vector Machine':
-    st.subheader('Support Vector Machine')
     st.write('Choose a dataset to try Support Vector Machine on')
     # radio button to choose the dataset
     dataset_radio = st.radio('Choose a dataset', ('Housing Dataset', 'Socials Dataset'))
+    st.markdown('---')
 
     # if the user chooses the housing dataset
     if dataset_radio == 'Housing Dataset':
@@ -526,9 +581,11 @@ if choose_model == 'Random Forest Classifier':
             residence_type = 1
         if residence_type == 'Rural':
             residence_type = 0
-        avg_glucose_level = st.number_input('Enter your average glucose level', min_value=0.0, max_value=350.0,value=0.0)
+        avg_glucose_level = st.number_input('Enter your average glucose level', min_value=0.0, max_value=350.0,
+                                            value=0.0)
         bmi = st.number_input('Enter your BMI', min_value=0.0, max_value=60.0, value=0.0)
-        smoking_status = st.selectbox('What is your smoking status?', ('Never Smoked', 'Formerly Smoked', 'Smokes', 'Unknown'))
+        smoking_status = st.selectbox('What is your smoking status?',
+                                      ('Never Smoked', 'Formerly Smoked', 'Smokes', 'Unknown'))
         if smoking_status == 'Never Smoked':
             smoking_status = 2
         if smoking_status == 'Formerly Smoked':
