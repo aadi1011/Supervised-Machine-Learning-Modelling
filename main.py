@@ -452,3 +452,16 @@ if choose_model == 'Support Vector Machine':
             prediction = predict_social_svm(age, estimated_salary)
             # display the prediction
             st.success('The person {} the product'.format(prediction))
+
+        if dataset:
+            # load the socials dataset
+            socials = pd.read_csv('./data/Social_Network_Ads.csv')
+            # display the dataset
+            st.write(socials)
+
+if choose_model == 'Random Forest Classifier':
+    st.subheader('Random Forest Classifier')
+    st.write('Choose a dataset to try Random Forest Classifier on')
+    # radio button to choose the dataset
+    dataset_radio = st.radio('Choose a dataset', ('Iris Dataset', 'Stroke Prediction Dataset'))
+    st.markdown('---')
