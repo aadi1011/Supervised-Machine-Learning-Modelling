@@ -17,7 +17,7 @@ st.sidebar.title('Choose a model')
 
 choose_model = st.sidebar.selectbox('Select a model', (
     'Simple Linear Regression', 'Multiple Linear Regression', 'K-Nearest Neighbours', 'Random Forest Classifier',
-    'Support Vector Machine', 'Logistic Regression'))
+    'Support Vector Machine'))
 
 dataset = st.sidebar.checkbox('Show dataset')
 
