@@ -3,7 +3,8 @@
 ### Datasets:
 
 - Sales
-- Social Network Ads
+- Social Network Ads - [Source](https://www.kaggle.com/datasets/rakeshrau/social-network-ads)<br>
+      A categorical dataset to determine whether a user purchased a particular product     
 - Abalone Data
 - Breast Cancer Diagnostics
 - Shopping Day
