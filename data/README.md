@@ -12,6 +12,9 @@
       Binary Classification Prediction for type of Breast Cancer
 - **Daily Bike Sharing Dataset** - [Source](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset?select=day.csv)<br>
       This dataset contains the hourly and daily count of rental bikes between the years 2011 and 2012 in the Capital bike share system with the corresponding weather and seasonal information.
-- **House Loan Prediction** - [Source](https://www.kaggle.com/datasets/rodolfomendes/abalone-dataset)<br>
-- **Iris**
-- **Stroke Prediction Dataset**
+- **House Loan Prediction** - [Source](https://www.kaggle.com/datasets/leonbora/analytics-vidhya-loan-prediction)<br>
+      Dataset by Analytics Vidhya to prediction loan possibility of various applicants.
+- **Iris** - [Source](https://www.kaggle.com/datasets/vikrishnan/iris-dataset)<br>
+      Iris flower benchmark dataset used for multi-class classification
+- **Stroke Prediction Dataset** - [Source](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)<br>
+      11 clinical features for predicting stroke events
