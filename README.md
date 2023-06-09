@@ -14,9 +14,4 @@ Deployment of the same has also been done on Streamlit.
 -  Random Forest
 
 ## Datasets Used
-- Store Sales
-- House Price Dataset
-- Iris Dataset
-- Breast Cancer (Wisconsin) Dataset
-- Stroke Prediction
-- Social Media Purchase Dataset
+[Click Here](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/tree/main/data)
