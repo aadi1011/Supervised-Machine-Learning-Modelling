@@ -2,6 +2,8 @@
 A repository with the complete overview of Supervised Machine Learning and the implementation of various models based on multiple datasets.
 Deployment of the same has also been done on Streamlit.
 
+### [Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/)
+
 ## Machine Learning Models:
 - Simple Linear Regression
 - Multiple Linear Regression
