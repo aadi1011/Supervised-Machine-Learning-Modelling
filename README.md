@@ -23,3 +23,14 @@ Deployment of the same has also been done on Streamlit.
 
 ## Datasets Used
 [Click Here](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/tree/main/data)
+
+## Usage
+
+**supervised-ml-aadi1011.streamlit.app/**
+
+Visit the above site to check the deployment of each of the models.
+
+![image](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/efecdb83-0fc8-44c2-bd59-101a42c87e79)
+![image](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/260971b9-e9dc-43db-b9d6-caf21e33e0fa)
+
+**Codes for public access coming soon!**
