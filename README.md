@@ -34,3 +34,7 @@ Visit the above site to check the deployment of each of the models.
 ![image](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/260971b9-e9dc-43db-b9d6-caf21e33e0fa)
 
 **Codes for public access coming soon!**
+
+## Contribute
+
+Feel free to fork the repository and contribute pull requests to it! Always welcome. If you wish to reproduce this for your personal work, a small acknowledgement comments would be cheerful! 
