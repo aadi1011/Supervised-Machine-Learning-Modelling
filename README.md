@@ -1,4 +1,4 @@
-# Supervised-Machine-Learning-Modelling
+# Supervised Machine Learning Modelling
 
 <a href="https://supervised-ml-aadi1011.streamlit.app/"><img alt="GitHub" src="https://img.shields.io/badge/deployment-passing-brightgreen"></a>
 <a href="https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/main.py"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aadi1011/Supervised-Machine-Learning-Modelling"> </a> <a href="https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/aadi1011/Supervised-Machine-Learning-Modelling"></a> 
