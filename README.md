@@ -1,40 +1,86 @@
-# Supervised Machine Learning Modelling
+<h1 align=center>Supervised Machine Learning Modelling</h1>
 
-<a href="https://supervised-ml-aadi1011.streamlit.app/"><img alt="GitHub" src="https://img.shields.io/badge/deployment-passing-brightgreen"></a>
-<a href="https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/main.py"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aadi1011/Supervised-Machine-Learning-Modelling"> </a> <a href="https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/aadi1011/Supervised-Machine-Learning-Modelling"></a> 
+[![Deployment Status](https://img.shields.io/badge/deployment-passing-brightgreen)](https://supervised-ml-aadi1011.streamlit.app/)
+[![Code Size](https://img.shields.io/github/languages/code-size/aadi1011/Supervised-Machine-Learning-Modelling)](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/main.py)
+[![License](https://img.shields.io/github/license/aadi1011/Supervised-Machine-Learning-Modelling)](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/LICENSE)
 
+This repository provides a comprehensive overview of Supervised Machine Learning and implements various models based on multiple datasets. Additionally, the models have been deployed on Streamlit.
 
+## Streamlit Deployment
 
-A repository with the complete overview of Supervised Machine Learning and the implementation of various models based on multiple datasets.
-Deployment of the same has also been done on Streamlit.
+You can access the deployed models using the following link:
 
-### [Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/)
+**[Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/)**
 
-## Machine Learning Models:
+## Machine Learning Models
+
+The repository includes the implementation of the following machine learning models:
+
 - Simple Linear Regression
 - Multiple Linear Regression
 - Support Vector Machine
   - Support Vector Regression
-  -  Support Vector Classifier
--  K-Nearest Neighbours
-  - KNN Classfier
+  - Support Vector Classifier
+- K-Nearest Neighbours
+  - KNN Classifier
   - KNN Regressor
--  Random Forest
+- Random Forest
 
 ## Datasets Used
-[Click Here](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/tree/main/data)
+
+The repository uses multiple datasets, which can be found in the following directory:
+
+[Datasets Directory](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/tree/main/data)
 
 ## Usage
 
-**supervised-ml-aadi1011.streamlit.app/**
+To explore the deployed models, visit the following site:
 
-Visit the above site to check the deployment of each of the models.
+[Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/)
 
-![image](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/efecdb83-0fc8-44c2-bd59-101a42c87e79)
-![image](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/260971b9-e9dc-43db-b9d6-caf21e33e0fa)
+Here are a couple of screenshots from the deployed application:
 
-**Codes for public access coming soon!**
+![Screenshot 1](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/efecdb83-0fc8-44c2-bd59-101a42c87e79)
+![Screenshot 2](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/260971b9-e9dc-43db-b9d6-caf21e33e0fa)
 
-## Contribute
+Please note that the source codes will be made available for public access soon.
 
-Feel free to fork the repository and contribute pull requests to it! Always welcome. If you wish to reproduce this for your personal work, a small acknowledgement comments would be cheerful! 
+## Contributing
+
+We welcome contributions to this repository! To contribute, follow these steps:
+
+1. Fork the repository by clicking on the "Fork" button on the top right corner of this page.
+
+2. Clone the forked repository to your local machine using the following command in your terminal or command prompt:
+
+   ```bash
+   git clone https://github.com/your-username/Supervised-Machine-Learning-Modelling.git
+
+3. Create a new branch for your changes:
+    ```
+    cd Supervised-Machine-Learning-Modelling
+    git checkout -b feature/your-feature-name
+    ```
+
+4. Make your desired changes to the code, datasets, or documentation.
+5. Commit your changes with a descriptive commit message:
+    ```
+    git add .
+    git commit -m "Add your commit message here"
+    ```
+
+6. Push your changes to your forked repository:
+    ```
+     git push origin feature/your-feature-name
+    ```
+
+7. Finally, open a pull request from your forked repository to the original repository. Provide a clear description of your changes and submit the pull request.
+
+---
+
+We appreciate your contributions and will review your pull request as soon as possible.
+
+If you use this repository for your personal work, we kindly ask for a small acknowledgement in your comments!
+
+Thank you for your interest in contributing to this project!
+
