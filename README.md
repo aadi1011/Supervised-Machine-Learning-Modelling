@@ -79,6 +79,8 @@ We welcome contributions to this repository! To contribute, follow these steps:
 
 ## Notebooks/Model Reference
 
+Any reference to as how the model was built with the parameters and tuning can be viewed in the [`notebooks`](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/tree/main/notebooks) folder. I wanted to make project completely open source and free as a good education platform for everyone to get a hands-on demo on how supervised machine learning models are created and easily deployed with streamlit
+
 ---
 
 We appreciate your contributions and will review your pull request as soon as possible.
