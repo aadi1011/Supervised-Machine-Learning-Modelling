@@ -4,9 +4,9 @@ This directory contains a collection of Jupyter notebooks showcasing various sup
 
 The python jupyter notebook files used to create the models will be uploaded here.
 
-- **AdaBoost.ipynb**: Notebook demonstrating the AdaBoost algorithm for classification tasks.
-- **AdaBoost_Classifier.ipynb**: Notebook showcasing the implementation of the AdaBoost classifier.
-- **Decision_Tree.ipynb**: Notebook illustrating the use of decision trees for classification problems.
+- **[AdaBoost.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/AdaBoost.ipynb)**: Notebook demonstrating the AdaBoost algorithm for classification tasks.
+- **[AdaBoost_Classifier.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/AdaBoost_Classifier.ipynb)**: Notebook showcasing the implementation of the AdaBoost classifier.
+- **[Decision_Tree.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Decision_Tree.ipynb)**: Notebook illustrating the use of decision trees for classification problems.
 - **KNN_Classification(1).ipynb**: Notebook presenting the application of the K-Nearest Neighbors algorithm for classification tasks.
 - **KNN_Classification.ipynb**: Notebook demonstrating the implementation of the K-Nearest Neighbors classifier.
 - **KNN_Regression.ipynb**: Notebook showcasing the use of the K-Nearest Neighbors algorithm for regression tasks.
