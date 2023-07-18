@@ -7,9 +7,9 @@ The python jupyter notebook files used to create the models will be uploaded her
 - **[AdaBoost.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/AdaBoost.ipynb)**: Notebook demonstrating the AdaBoost algorithm for classification tasks.
 - **[AdaBoost_Classifier.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/AdaBoost_Classifier.ipynb)**: Notebook showcasing the implementation of the AdaBoost classifier.
 - **[Decision_Tree.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Decision_Tree.ipynb)**: Notebook illustrating the use of decision trees for classification problems.
-- **KNN_Classification(1).ipynb**: Notebook presenting the application of the K-Nearest Neighbors algorithm for classification tasks.
-- **KNN_Classification.ipynb**: Notebook demonstrating the implementation of the K-Nearest Neighbors classifier.
-- **KNN_Regression.ipynb**: Notebook showcasing the use of the K-Nearest Neighbors algorithm for regression tasks.
+- **[KNN_Classification(1).ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Classification(1).ipynb)**: Notebook presenting the application of the K-Nearest Neighbors algorithm for classification tasks.
+- **[KNN_Classification.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Classification.ipynb)**: Notebook demonstrating the implementation of the K-Nearest Neighbors classifier.
+- **[KNN_Regression.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Regression.ipynb)**: Notebook showcasing the use of the K-Nearest Neighbors algorithm for regression tasks.
 - **MultipleLinearRegression.ipynb**: Notebook providing an example of multiple linear regression.
 - **Naive_Bayes.ipynb**: Notebook demonstrating the Naive Bayes algorithm for classification tasks.
 - **Polynomial_Regression_Aadith.ipynb**: Notebook illustrating polynomial regression using the Aadith method.
