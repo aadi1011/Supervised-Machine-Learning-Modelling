@@ -13,9 +13,9 @@ The python jupyter notebook files used to create the models will be uploaded her
 - **[MultipleLinearRegression.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/MultipleLinearRegression.ipynb)**: Notebook providing an example of multiple linear regression.
 - **[Naive_Bayes.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Naive_Bayes.ipynb)**: Notebook demonstrating the Naive Bayes algorithm for classification tasks.
 - **[Polynomial_Regression_Aadith.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Polynomial_Regression_Aadith.ipynb)**: Notebook illustrating polynomial regression using the Aadith method.
-- **Random_Forest.ipynb**: Notebook showcasing the Random Forest algorithm for classification tasks.
-- **SVM.ipynb**: Notebook demonstrating the Support Vector Machine algorithm for classification tasks.
-- **SimpleLinearRegProject.ipynb**: Notebook providing a simple linear regression project.
+- **[Random_Forest.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Random_Forest.ipynb)**: Notebook showcasing the Random Forest algorithm for classification tasks.
+- **[SVM.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/SVM.ipynb)**: Notebook demonstrating the Support Vector Machine algorithm for classification tasks.
+- **[SimpleLinearRegProject.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/SimpleLinearRegProject.ipynb)**: Notebook providing a simple linear regression project.
 
 Feel free to explore and learn from these notebooks to gain insights into the implementation and usage of different supervised machine learning algorithms.
 If you would like to contribute as well, please check out the master [README.md](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/README.md#contributing) file.
