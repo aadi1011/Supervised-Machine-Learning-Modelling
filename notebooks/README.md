@@ -10,9 +10,9 @@ The python jupyter notebook files used to create the models will be uploaded her
 - **[KNN_Classification(1).ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Classification(1).ipynb)**: Notebook presenting the application of the K-Nearest Neighbors algorithm for classification tasks.
 - **[KNN_Classification.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Classification.ipynb)**: Notebook demonstrating the implementation of the K-Nearest Neighbors classifier.
 - **[KNN_Regression.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/KNN_Regression.ipynb)**: Notebook showcasing the use of the K-Nearest Neighbors algorithm for regression tasks.
-- **MultipleLinearRegression.ipynb**: Notebook providing an example of multiple linear regression.
-- **Naive_Bayes.ipynb**: Notebook demonstrating the Naive Bayes algorithm for classification tasks.
-- **Polynomial_Regression_Aadith.ipynb**: Notebook illustrating polynomial regression using the Aadith method.
+- **[MultipleLinearRegression.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/MultipleLinearRegression.ipynb)**: Notebook providing an example of multiple linear regression.
+- **[Naive_Bayes.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Naive_Bayes.ipynb)**: Notebook demonstrating the Naive Bayes algorithm for classification tasks.
+- **[Polynomial_Regression_Aadith.ipynb](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/notebooks/Polynomial_Regression_Aadith.ipynb)**: Notebook illustrating polynomial regression using the Aadith method.
 - **Random_Forest.ipynb**: Notebook showcasing the Random Forest algorithm for classification tasks.
 - **SVM.ipynb**: Notebook demonstrating the Support Vector Machine algorithm for classification tasks.
 - **SimpleLinearRegProject.ipynb**: Notebook providing a simple linear regression project.
