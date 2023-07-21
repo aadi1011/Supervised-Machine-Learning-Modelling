@@ -12,6 +12,7 @@ You can access the deployed models using the following link:
 
 **[Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/)**
 
+Note: Incase the app is down due to inactivity, please click on the button to restart the app
 ## Machine Learning Models
 
 The repository includes the implementation of the following machine learning models:
