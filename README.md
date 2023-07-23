@@ -4,7 +4,7 @@
 [![Code Size](https://img.shields.io/github/languages/code-size/aadi1011/Supervised-Machine-Learning-Modelling)](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/main.py)
 [![License](https://img.shields.io/github/license/aadi1011/Supervised-Machine-Learning-Modelling)](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/LICENSE)
 
-This repository provides a comprehensive overview of Supervised Machine Learning and implements various models based on multiple datasets. Additionally, the models have been deployed on Streamlit.
+This repository provides a comprehensive overview of Supervised Machine Learning and implements various models based on multiple datasets. Additionally, the models have been deployed on Streamlit. 
 
 ## Streamlit Deployment
 
