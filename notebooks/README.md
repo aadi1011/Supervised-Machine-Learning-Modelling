@@ -20,4 +20,4 @@ The python jupyter notebook files used to create the models will be uploaded her
 Feel free to explore and learn from these notebooks to gain insights into the implementation and usage of different supervised machine learning algorithms.
 If you would like to contribute as well, please check out the master [README.md](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/README.md#contributing) file.
 
-_p.s. These notebooks have not be used directly in the deployment. The pkl save file for them have created in this and they stored in the `models` folder_
+_p.s. These notebooks have not be used directly in the streamlit deployment. The **.pkl** save file for them have created in this and they stored in the `models` folder_
