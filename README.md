@@ -44,8 +44,6 @@ Here are a couple of screenshots from the deployed application:
 ![Screenshot 1](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/efecdb83-0fc8-44c2-bd59-101a42c87e79)
 ![Screenshot 2](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/assets/62766172/260971b9-e9dc-43db-b9d6-caf21e33e0fa)
 
-Please note that the source codes will be made available for public access soon.
-
 ## Contributing
 
 We welcome contributions to this repository! To contribute, follow these steps:
