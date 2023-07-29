@@ -1,4 +1,4 @@
-## Folder containing all datasets used in deploying and testing the supervised learning models
+## Folder containing all datasets used in testing and deploying the supervised learning models
 
 ### Datasets:
 
