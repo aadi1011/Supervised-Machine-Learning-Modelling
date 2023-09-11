@@ -26,6 +26,7 @@ The repository includes the implementation of the following machine learning mod
   - KNN Classifier
   - KNN Regressor
 - Random Forest
+- Decision Tree
 
 ## Datasets Used
 
