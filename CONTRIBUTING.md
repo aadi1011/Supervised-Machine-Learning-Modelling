@@ -36,7 +36,7 @@ Before submitting your changes, make sure to test the application locally. Verif
 
 ## Streamlit Deployment
 
-The deployed models can be accessed using the following link: [Streamlit Deployment](link_to_streamlit_deployment). If you encounter any issues with the deployed apps, please report them through GitHub issues.
+The deployed models can be accessed using the following link: [Streamlit Deployment](https://supervised-ml-aadi1011.streamlit.app/). If you encounter any issues with the deployed apps, please report them through GitHub issues.
 
 Thank you for your contribution!
 
