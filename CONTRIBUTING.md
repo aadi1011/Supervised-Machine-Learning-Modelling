@@ -3,22 +3,34 @@
 Welcome to [Supervised Machine Learning Modelling](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling) repository! We appreciate your interest in contributing to our project. 
 By participating in this project, you agree to abide by our [code of conduct](link_to_code_of_conduct.md).
 
+> **HACKTOBERFEST 2023!**<br>
+> This repository is part of Hacktoberfest 2023! Feel free to read this CONTRIBUTING.md file, and contribute to this repository!
+
+
 ## How to Contribute
 
 We welcome contributions in the form of bug reports, feature requests, code improvements, and documentation enhancements. To contribute, follow these steps:
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine:<br>
-`git clone https://github.com/aadi1011/Supervised-Machine-Learning-Modelling.git`
+```bash
+git clone https://github.com/aadi1011/Supervised-Machine-Learning-Modelling.git
+```
 <br><br>
 4. Create a new branch for your feature or bug fix:<br>
-`git checkout -b feature-name`
+```bash
+git checkout -b feature-name
+```
 <br><br>
 6. Make your changes and commit them with descriptive commit messages:<br>
-`git commit -m "Description of your changes"`
+```bash
+git commit -m "Description of your changes"
+```
 <br><br>
 8. Push your changes to your forked repository:<br>
-`git push origin feature-name`
+```bash
+git push origin feature-name
+```
 <br><br>
 9. Create a pull request (PR) from your forked repository to the main repository's `main` branch. Provide a clear title and description for your PR.
 
