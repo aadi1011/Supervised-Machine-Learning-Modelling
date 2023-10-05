@@ -9,7 +9,7 @@ We welcome contributions in the form of bug reports, feature requests, code impr
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine:<br>
-`git clone https://github.com/your-username/your-repo.git`
+`git clone https://github.com/aadi1011/Supervised-Machine-Learning-Modelling.git`
 <br><br>
 4. Create a new branch for your feature or bug fix:<br>
 `git checkout -b feature-name`
