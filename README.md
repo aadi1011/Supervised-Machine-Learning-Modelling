@@ -76,6 +76,10 @@ We welcome contributions to this repository! To contribute, follow these steps:
 
 7. Finally, open a pull request from your forked repository to the original repository. Provide a clear description of your changes and submit the pull request.
 
+For more information, visit the [`CONTRIBUTIONS`](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/CONTRIBUTING.md) file.
+
+### Hacktoberfest 2023
+We are participating in the Hacktoberfest
 
 ## Notebooks/Model Reference
 
