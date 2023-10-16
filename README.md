@@ -79,7 +79,7 @@ We welcome contributions to this repository! To contribute, follow these steps:
 For more information, visit the [`CONTRIBUTIONS`](https://github.com/aadi1011/Supervised-Machine-Learning-Modelling/blob/main/CONTRIBUTING.md) file.
 
 ### Hacktoberfest 2023
-We are participating in the Hacktoberfest
+We are participating in the Hacktoberfest 2023. You may fork this repository, and make your submissions.
 
 ## Notebooks/Model Reference
 
