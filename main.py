@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-## ----- STREAMLIT --------#
+## ----- STREAMLIT --------
 
 # Title of the App
 st.title('Supervised Machine Learning')
