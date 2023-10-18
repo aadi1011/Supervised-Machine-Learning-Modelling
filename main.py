@@ -5,6 +5,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+## ----- STREAMLIT --------#
+
 # Title of the App
 st.title('Supervised Machine Learning')
 st.write(
@@ -21,6 +23,7 @@ choose_model = st.sidebar.selectbox('Select a model', (
 
 dataset = st.sidebar.checkbox('Show dataset')
 
+## -------- FUNCTIONS --------------
 
 # create a function to load the SalesLinearRegression model from pkl file based on the sales input
 def predict_sales(sales):
@@ -152,7 +155,8 @@ def predict_abalone_knn(sex, length, diameter, height, whole_weight, shucked_wei
     class_pred = model.predict([[sex, length, diameter, height, whole_weight, shucked_weight, viscera_weight, shell_weight]])
     return class_pred
 
-# ''' STREAMLIT MODEL MENU '''
+
+# ----------------- STREAMLIT MODEL MENU -----------------
 
 # if the model selected is Simple Linear Regression, give option whether to try simple linear regression on iris dataset
 # or sales dataset
@@ -605,3 +609,5 @@ if choose_model == 'Random Forest Classifier':
             stroke = pd.read_csv('./data/stroke_prediction.csv')
             # display the dataset
             st.write(stroke)
+
+## --------------- END OF FILE -------------------
