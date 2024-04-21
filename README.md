@@ -16,7 +16,7 @@ You can access the deployed models using the following link:
 Note: Incase the app is down due to streamlit inactivity, please click on the button to restart the app
 ## Machine Learning Models
 
-The repository includes the implementation of the following machine learning models:
+The repository includes the implementation of the following machine learning models:  
 
 - Simple Linear Regression
 - Multiple Linear Regression
